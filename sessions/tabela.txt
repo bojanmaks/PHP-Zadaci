@@ -1,0 +1,11 @@
+CREATE TABLE  customers  (
+ customerEmail VARCHAR(40) NOT NULL,
+ lname VARCHAR(25) NOT NULL,
+ fname VARCHAR(25) NOT NULL,
+ title ENUM('Mr.', 'Mrs.', 'Miss', 'Ms.','Dr.'),
+ passwd VARCHAR(40),
+ PRIMARY KEY (customerEmail)
+);
+
+INSERT INTO `users`(`email`, `lname`, `fname`, `title`, `passwd`) 
+VALUES ('kire@gmail.com','Trajkovski','Kire','Mr.',SHA('VASH_PASSWORD'))

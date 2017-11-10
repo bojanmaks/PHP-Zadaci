@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Web Survey</title>
+    </head>
+    <body>
+        <h1>Personal Information</h1>
+
+        <form action="read_survey.php" method="POST">
+            <input type="hidden" name="skrieno" value="56" />
+            Name: <input type="text" name="fname" placeholder="Enter your First Name here">
+            <input type="text" name="lname" value="Last Name"><br/><br/>
+
+            Gender<br/>
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="male"> Male<br/><br/>
+
+            Age<br/>
+            <select name="age" size=2>
+                <option value="0">Under 18</option>
+                <option value="1">18-35</option>
+                <option value="2" selected>36-55</option>
+                <option value="3">Over 55</option>
+            </select><br/><br/>
+
+            Favorites pasttime(s)<br/>
+            <input type="checkbox" name="pasttime[]" value="games"> Games
+            <input type="checkbox" name="pasttime[]" value="sports"> Sports<br/>
+            <input type="checkbox" name="pasttime[]" value="reading"> Reading
+            <input type="checkbox" name="pasttime[]" value="music"> Music<br/>
+            <input type="checkbox" name="pasttime[]" value="computers"> Computers
+            <input type="checkbox" name="pasttime[]" value="tv"> TV/Movies<br/><br/>
+
+            Please tell us anything else about yourself:<br/>
+            <textarea name="personal_info" cols=50 rows=5 >
+Where were you born?
+What was your favorite subject in school?
+How many siblings do you have? Etc.
+            </textarea><br/><br/>
+
+            <input type="reset"> <input type="submit" name="submit" value="Send Info">
+        </form>
+
+    </body>
+</html>
